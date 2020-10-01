@@ -134,7 +134,7 @@ import javax.annotation.PreDestroy;
 **To include in config.xml:**
 
 ```XML
-<bean class="com.cognizant.spring.springcore.lc.annotations.Patient" name="patient" p:id="123" />
+<bean class="com.spring.springcore.lc.annotations.Patient" name="patient" p:id="123" />
 	<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" /> <! --Enable annotation support - PostConstruct and PreDestroy-- >
 ```
 
@@ -354,10 +354,10 @@ We can inject reference types with the \<ref bean=""> tag:
 
 ```XML
 <bean
-		class="com.cognizant.spring.springcoreadvance.autowiring.Address"
+		class="com.spring.springcoreadvance.autowiring.Address"
 		name="address" p:hno="123" p:street="orchard" p:city="singapore" />
 	<bean
-		class="com.cognizant.spring.springcoreadvance.autowiring.Employee"
+		class="com.spring.springcoreadvance.autowiring.Employee"
 		name="employee" autowire="byType" />
 ```
 
@@ -377,10 +377,10 @@ Can be used at constructor/field/setter
 ```XML
 	<context:annotation-config />
 	<bean
-		class="com.cognizant.spring.springcoreadvance.autowiring.annotations.Address"
+		class="com.spring.springcoreadvance.autowiring.annotations.Address"
 		name="address" p:hno="123" p:street="orchard" p:city="singapore" />
 	<bean
-		class="com.cognizant.spring.springcoreadvance.autowiring.annotations.Employee"
+		class="com.spring.springcoreadvance.autowiring.annotations.Employee"
 		name="employee" />
 ```
 
@@ -393,9 +393,9 @@ private Address address;
 ```
 
 ```XML
-<bean class="com.cognizant.spring.springcoreadvance.autowiring.annotations.Address"
+<bean class="com.spring.springcoreadvance.autowiring.annotations.Address"
 name="address2" p:hno="123" p:street="orchard" p:city="singapore" />
-<bean class="com.cognizant.spring.springcoreadvance.autowiring.annotations.Address"
+<bean class="com.spring.springcoreadvance.autowiring.annotations.Address"
 name="address123" p:hno="567" p:street="orchard" p:city="singapore" />
 ```
 
@@ -408,7 +408,7 @@ name="address123" p:hno="567" p:street="orchard" p:city="singapore" />
 		<value>Iphone</value>
 	</util:list>
 	<bean
-		class="com.cognizant.spring.springcoreadvance.standalone.collections.ProductsList" name="productsList">
+		class="com.spring.springcoreadvance.standalone.collections.ProductsList" name="productsList">
 		<property name="productNames">
 			<ref bean="productNames" />
 		</property>
@@ -432,7 +432,7 @@ public class Instructor {
 Then we need to let spring knows which packages to scan for components in the configuration file
 
 ```XML
-<context:component-scan base-package="com.cognizant.spring.springcoreadvance.stereotype.annotations"/>
+<context:component-scan base-package="com.spring.springcoreadvance.stereotype.annotations"/>
 ```
 
 ## @Scope
